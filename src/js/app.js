@@ -1,3 +1,4 @@
+// Constants Variables
 const main_items = document.querySelectorAll('.main_content_item');
 const main_content_img = document.querySelector('.main_content_img');
 const images = {

@@ -8,6 +8,8 @@ body {
 
     user-select: none;
     -webkit-user-select: none;
+
+    overflow-x: hidden;
 }
 
 .main_content {
@@ -80,4 +82,20 @@ body {
 
 .main_content_author a {
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .center_div {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .main_content_img {
+        width: 100% !important;
+    }
+
+    .main_content_footer, .main_content_author {
+        position: unset;
+        text-align: center;
+    }
 }
