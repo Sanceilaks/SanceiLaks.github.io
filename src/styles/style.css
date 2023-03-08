@@ -29,7 +29,6 @@ body {
     cursor: pointer;
 
     text-decoration: none;
-
     transition: .3s;
 }
 
@@ -71,4 +70,14 @@ body {
     position: absolute;
     right: 5px;
     bottom: 5px;
+}
+
+.main_content_author {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+.main_content_author a {
+    color: #fff;
 }
