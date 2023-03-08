@@ -7,16 +7,21 @@ const images = {
     discord: './src/assets/ds.svg',
     github: './src/assets/git.svg'
 };
+// Temporary Variables
+let timer = null;
 
 const enterMouseItems = items => {
     items.forEach(el => {
-        el.onmouseover = _ => {
-            main_content_img.src = images[el.id];
-            main_content_img.classList.add('active');
+        el.onmouseenter = _ => {
+            timer = setTimeout(_ => {
+                main_content_img.src = images[el.id];
+                main_content_img.classList.add('active');
+            }, 200);
         };
 
         el.onmouseout = _ => {
             main_content_img.classList.remove('active');
+            clearTimeout(timer);
         };
     });
 };
