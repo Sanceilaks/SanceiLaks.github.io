@@ -104,7 +104,6 @@ body {
 
 @media (max-width: 768px) {
     .main_content {
-        width: 100%;
         font-size: 30px;
     }
 
