@@ -1,12 +1,8 @@
 // Constants Variables
 const main_items = document.querySelectorAll('.main_content_item');
 const main_content_img = document.querySelector('.main_content_img');
-const images = {
-    vk: './src/assets/vk.svg',
-    telegram: './src/assets/tg.svg',
-    discord: './src/assets/ds.svg',
-    github: './src/assets/git.svg'
-};
+const folderIMG = './src/assets';
+const images = { vk: `${folderIMG}/vk.svg`, telegram: `${folderIMG}/tg.svg`, discord: `${folderIMG}/ds.svg`, github: `${folderIMG}/git.svg` };
 // Temporary Variables
 let timer = null;
 
