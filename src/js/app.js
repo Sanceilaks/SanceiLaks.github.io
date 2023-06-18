@@ -3,8 +3,30 @@ const main_items = document.querySelectorAll('.main_content_item');
 const main_content_img = document.querySelector('.main_content_img');
 const folderIMG = './src/assets';
 const images = { vk: `${folderIMG}/vk.svg`, telegram: `${folderIMG}/tg.svg`, discord: `${folderIMG}/ds.svg`, github: `${folderIMG}/git.svg` };
+const preloader = document.querySelector('.preloader'), button = document.querySelector('.preloader-content_button');
+const searchresult = /\#(?<id>[A-Za-z0-9_\-]{11})/.exec(window.location.hash);
+const videoId = searchresult ? searchresult.groups.id : "shEwhe3sDpo";
 // Temporary Variables
 let timer = null;
+
+YT.ready(_ => {
+    player = new YT.Player('player', {
+        videoId: videoId,
+        playerVars: { 'autoplay': 0, 'controls': 0, 'loop': 1, 'playlist': videoId },
+        events: {
+            'onReady': e => {
+                e.target.setVolume(25);
+                button.innerText = 'Click';
+                button.classList.add('ready');
+                button.onclick = _ => {
+                    preloader.remove()
+                    player.unMute();
+                    player.playVideo();
+                };
+            }
+        }
+    });
+});
 
 const enterMouseItems = items => {
     items.forEach(el => {
