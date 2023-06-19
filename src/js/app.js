@@ -1,8 +1,17 @@
+function preloadImage(path) {
+    let img = new Image();
+    img.src = path;
+    return img;
+}
+
 // Constants Variables
 const main_items = document.querySelectorAll('.main_content_item');
 const main_content_img = document.querySelector('.main_content_img');
 const folderIMG = './src/assets';
-const images = { vk: `${folderIMG}/vk.svg`, telegram: `${folderIMG}/tg.svg`, discord: `${folderIMG}/ds.svg`, github: `${folderIMG}/git.svg` };
+const images = {
+    vk: preloadImage(`${folderIMG}/vk.svg`), telegram: preloadImage(`${folderIMG}/tg.svg`),
+    discord: preloadImage(`${folderIMG}/ds.svg`), github: preloadImage(`${folderIMG}/git.svg`)
+};
 const preloader = document.querySelector('.preloader'), button = document.querySelector('.preloader-content_button');
 const searchresult = /\#(?<id>[A-Za-z0-9_\-]{11})/.exec(window.location.hash);
 const videoId = searchresult ? searchresult.groups.id : "shEwhe3sDpo";
@@ -32,7 +41,7 @@ const enterMouseItems = items => {
     items.forEach(el => {
         el.onmouseenter = _ => {
             timer = setTimeout(_ => {
-                main_content_img.src = images[el.id];
+                main_content_img.src = images[el.id].src;
                 main_content_img.classList.add('active');
             }, 200);
         };
