@@ -14,7 +14,7 @@ const images = {
 };
 const preloader = document.querySelector('.preloader'), button = document.querySelector('.preloader-content_button');
 const searchresult = /\#(?<id>[A-Za-z0-9_\-]{11})/.exec(window.location.hash);
-const videoId = searchresult ? searchresult.groups.id : "AOLdn36K7Xk";
+const videoId = searchresult ? searchresult.groups.id : "1PuWLayNJKc";
 // Temporary Variables
 let timer = null;
 
