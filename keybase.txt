@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/voidpointer_t
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sanceilaks.github.io
+  * I am voidpointer_t (https://keybase.io/voidpointer_t) on keybase.
+  * I have a public key ASCb4s8CIKYw9Tm6DADZBCU0x26Qj3LIOd7DrrP2YyaypQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e61219248ea1a8cc62c8cbd2a120b58444afcc22b247728e1d42fe28d83a5d220a",
+      "host": "keybase.io",
+      "kid": "01209be2cf0220a630f539ba0c00d9042534c76e908f72c839dec3aeb3f66326b2a50a",
+      "uid": "5d75e6860d3231703f189eb63234aa19",
+      "username": "voidpointer_t"
+    },
+    "merkle_root": {
+      "ctime": 1717784626,
+      "hash": "5d98c9c2965098447510b08d37c726f5a62d3f25659649e025a091c335728bbc8f9719364669606217a0a7aba0b14d584ac15601381d3ae143309179b6026512",
+      "hash_meta": "af883e848ebd7716174997b78490ad9e7434fd9700c6be548c6170b1f82267a3",
+      "seqno": 25806801
+    },
+    "service": {
+      "entropy": "BvABQsYv5z+sr5VdVJ9I0q8w",
+      "hostname": "sanceilaks.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.3.1"
+  },
+  "ctime": 1717784687,
+  "expire_in": 504576000,
+  "prev": "fd6dc435e87c8b63c5e114af453c1252c7946912097644f30be657ba149a9051",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgm+LPAiCmMPU5ugwA2QQlNMdukI9yyDnew66z9mMmsqUKp3BheWxvYWTESpcCEMQg/W3ENeh8i2PF4RSvRTwSUseUaRIJdkTzC+ZXuhSakFHEIMWUjfGUa00Gw184XGbJ6AnylQZB53CUZsr9LpshdrtZAgHCo3NpZ8RABH/k4So0ak4CKmWxtluEM9r02kwThMJnuo/Wgr4cvQVVV4QzIHay76EmDuSykvwqvl/jZZv0sCYTOy5fhOrIBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEFLkgNvNvqiSua1yoZLJRfJIBl2oaRzMFxEJudaNrBNo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/voidpointer_t
+
+==================================================================
