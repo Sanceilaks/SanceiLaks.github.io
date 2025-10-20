@@ -1,3 +1,14 @@
+// Methods
+/**
+ * 
+ * @param {string} path 
+ * @returns {HTMLImageElement}
+ */
+const preload_image = (path) => {
+    const img = new Image();
+    img.src = path;
+    return img;
+};
 // Constants Variables
 const button = document.querySelector('.preloader-content_button');
 const image_folder = 'src/assets';
@@ -11,17 +22,6 @@ const image = document.querySelector('.main_content_img');
 // Temporary Variables
 let iterator = document.querySelectorAll('.main_content_item').values();
 let timer = null;
-// Methods
-/**
- * 
- * @param {string} path 
- * @returns {HTMLImageElement}
- */
-const preload_image = (path) => {
-    const img = new Image();
-    img.src = path;
-    return img;
-};
 
 YT.ready(() => {
     const hash = /\#(?<id>[A-Za-z0-9_\-]{11})/.exec(window.location.hash);
