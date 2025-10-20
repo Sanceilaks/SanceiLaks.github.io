@@ -129,9 +129,13 @@ body {
 }
 
 .preloader-content_button {
+    color: #fff;
+
     font-size: 25px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+
+    cursor: pointer;
 
     user-select: none;
     -webkit-user-select: none;
