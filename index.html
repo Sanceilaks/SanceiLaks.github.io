@@ -6,46 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>voidptr_t</title>
 
-    <link rel="icon" href="./src/assets/newlogo.png">
-    <link href="./src/styles/style.css" rel="stylesheet">
+    <link rel="icon" href="./src/assets/logo.png">
+    <link href="./src/styles/pages/index.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
     <div class="preloader">
-        <div class="preloader-content">
-            <div class="preloader-content_button"></div>
-        </div>
+        <div class="preloader-overlay"></div>
+        <button class="preloader-btn">click me</button>
     </div>
 
-    <div class="main_container_video">
+    <div class="player-container">
         <div id="player"></div>
     </div>
 
-    <div class="main">
-        <div class="main_content">
-            <a href="https://vk.com/voidptr_t" target="_blank" class="main_content_item" id="vk">
+    <main>
+        <div class="content">
+            <img class="content-link-icon">
+            <a data-id="vk" href="https://vk.com/voidptr_t" target="_blank" class="content-link">
                 #include &lt;vk&gt;
             </a>
-            <a href="https://t.me/vptr_t" target="_blank" class="main_content_item" id="telegram">
+            <a data-id="telegram" href="https://t.me/vptr_t" target="_blank" class="content-link">
                 import &lt;telegram&gt;
             </a>
-            <a href="https://discord.com/users/405339648416546816" target="_blank" class="main_content_item" id="discord">
+            <a data-id="discord" href="https://discord.com/users/405339648416546816" target="_blank" class="content-link">
                 use discord::{me}
             </a>
-            <a href="https://github.com/Sanceilaks" target="_blank" class="main_content_item" id="github">
+            <a data-id="github" href="https://github.com/Sanceilaks" target="_blank" class="content-link">
                 using github
             </a>
         </div>
-        
-        <img class="main_content_img">
-    </div>
-    <div class="main_content_footer">
-        <div class="main_content_footer_text">using voidptr_t = void*</div>
-        <div class="main_content_footer_author">
-            Special thanks to
-            <a href="https://github.com/twentytwo777" target="_blank">💜 twentytwo777</a>
-        </div>
-    </div>
+        <footer>
+            <a href="https://github.com/twentytwo777/" target="_blank" class="author">
+                <span class="author-placeholder">using voidptr_t = void*</span>
+                <span class="author-name">twentytwo777 (author)</span>
+            </a>
+        </footer>
+    </main>
 
     <script src="./src/js/app.js"></script>
 </body>

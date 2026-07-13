@@ -1,0 +1,72 @@
+.preloader {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.preloader.active {
+    pointer-events: none;
+}
+
+@property --overlay-visible {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+.preloader .preloader-overlay {
+    --overlay-visible: 0%;
+    --radial-gradient: radial-gradient(
+        circle at center,
+        transparent var(--overlay-visible),
+        #000 0%
+    );
+    
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    background-color: #000;
+    mask-image: var(--radial-gradient);
+    -webkit-mask-image: var(--radial-gradient);
+
+    z-index: -1;
+}
+
+@keyframes overlay-fade-out {
+    to {
+        --overlay-visible: 100%;
+    }
+}
+
+.preloader.active .preloader-overlay {
+    animation: 2s cubic-bezier(0.87, 0, 0.13, 1) overlay-fade-out forwards var(--default-transition-duration);
+}
+
+.preloader .preloader-btn {
+    display: flex;
+    column-gap: 10px;
+    
+    color: #fff;
+    font-size: 25px;
+
+    transition: opacity var(--default-transition-duration);
+}
+
+.preloader.active .preloader-btn {
+    opacity: 0;
+    pointer-events: none;
+}

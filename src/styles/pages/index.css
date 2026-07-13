@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+@import '../base.css';
+@import '../components/preloader.css';
+@import '../components/footer.css';
+
+* {
+    --default-transition-duration: 0.3s;
+}
+
+body {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .content {
+    position: relative;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    row-gap: 10px;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.content .content-link-icon {
+    width: 192px;
+    aspect-ratio: 1;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    opacity: 0;
+    transition: opacity var(--default-transition-duration), transform var(--default-transition-duration);
+}
+
+.content .content-link-icon.active {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.content .content-link {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+
+    transition: color var(--default-transition-duration), transform var(--default-transition-duration);
+}
+
+.content .content-link:hover {
+    color: #007e39;
+    transform: scale(0.9);
+}
+
+.player-container {
+    position: fixed;
+    inset: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#player {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.player-container:after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+    #player {
+        /* height = 100 * (9 / 16) = 56.25 */
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+    #player {
+        /* width = 100 / (9 / 16) = 177.777777 */
+        width: 177.78vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .content .content-link-icon {
+        width: 128px;
+    }
+
+    .content .content-link {
+        font-size: 24px;
+    }
+}
