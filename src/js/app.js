@@ -11,7 +11,7 @@ let timer = null;
 
 YT.ready(() => {
     const hash = /\#(?<id>[A-Za-z0-9_\-]{11})/.exec(window.location.hash);
-    const videoId = hash ? hash.groups.id : 'ajBoh2XK6kU';
+    const videoId = hash ? hash.groups.id : '8GlR5nRvmJc';
     new YT.Player('player', {
         videoId,
         playerVars: {
