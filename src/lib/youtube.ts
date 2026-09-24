@@ -1,4 +1,4 @@
-export const DEFAULT_VIDEO_ID = '8GlR5nRvmJc';
+export const DEFAULT_VIDEO_ID = 'ajBoh2XK6kU';
 export const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api';
 
 export function parseVideoId(hash: string): string {
